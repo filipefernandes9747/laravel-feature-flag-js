@@ -1,6 +1,6 @@
 # Laravel-feature-flag-js
 
-A lightweight, framework-agnostic **feature flag manager** with helpers/hooks for **React**, **Vue 3**, **Angular**, and **Svelte**.
+A lightweight, framework-agnostic **feature flag manager** with helpers/hooks for **React**, **Vue 2**, **Vue 3**, **Angular**, and **Svelte**.
 
 ---
 
@@ -61,6 +61,40 @@ function App() {
   return <div>{darkModeEnabled ? "Dark Mode ON" : "Dark Mode OFF"}</div>;
 }
 ```
+
+---
+
+## Vue 2 Helper
+
+```js
+import Vue from "vue";
+import { FeatureFlag, useFeatureFlagVue2 } from "laravel-feature-flag-js";
+
+const flags = new FeatureFlag({ betaFeature: true });
+
+export default {
+  data() {
+    return {
+      feature: useFeatureFlagVue2(flags, "betaFeature"),
+    };
+  },
+  template: `
+    <div>
+      <p v-if="feature.state.enabled">Beta feature enabled</p>
+      <p v-else>Beta feature disabled</p>
+      <button @click="toggleFeature">Toggle</button>
+    </div>
+  `,
+  methods: {
+    toggleFeature() {
+      flags.toggle("betaFeature");
+      this.feature.refresh(); // manually refresh reactive state
+    },
+  },
+};
+```
+
+---
 
 ---
 

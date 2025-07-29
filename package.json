@@ -1,9 +1,18 @@
 {
   "name": "laravel-feature-flag-js",
   "version": "0.0.1",
-  "description": "Feature flag manager with React, Vue, Angular and Svelte helpers",
+  "description": "Feature flag manager with React, Vue 2 & 3, Angular and Svelte helpers",
   "main": "index.js",
   "types": "src/angular.ts",
+  "files": [
+    "index.js",
+    "src/featureFlag.js",
+    "src/react.js",
+    "src/vue.js",
+    "src/vue2.js",
+    "src/angular.ts",
+    "src/svelte.js"
+  ],
   "scripts": {
     "test": "node test/featureFlag.test.js"
   },
@@ -13,13 +22,14 @@
     "flag",
     "react",
     "vue",
-    "angular"
+    "angular",
+    "svelte"
   ],
-  "author": "Filipe Fernandes",
+  "author": "Your Name",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=16",
-    "vue": ">=3",
+    "vue": "^2.6 || ^3.0",
     "@angular/core": ">=12",
     "svelte": ">=3"
   }
