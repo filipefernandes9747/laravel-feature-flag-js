@@ -1,55 +1,29 @@
 {
   "name": "@filipefernandes/laravel-feature-flag-js",
   "version": "0.0.1",
-  "description": "Feature flag manager with React, Vue 2 & 3, Angular and Svelte helpers",
+  "description": "A lightweight, framework-agnostic feature flag manager with helpers",
   "main": "index.js",
   "files": [
     "index.js",
-    "src/featureFlag.js",
-    "src/react.js",
-    "src/vue.js",
-    "src/vue2.js",
-    "src/angular.ts",
-    "src/svelte.js"
+    "src/"
   ],
   "scripts": {
-    "test": "node test/featureFlag.test.js"
+    "test": "node test/featureFlag.test.js",
+    "lint": "eslint ."
   },
   "keywords": [
     "feature-flag",
     "feature",
-    "flag",
-    "react",
-    "vue",
-    "angular",
-    "svelte"
+    "flag"
   ],
   "author": "Filipe Fernandes",
   "license": "MIT",
   "exports": {
-    ".": {
-      "import": "./index.js"
-    },
-    "./vue": {
-      "import": "./src/vue.js"
-    },
-    "./vue2": {
-      "import": "./src/vue2.js"
-    },
-    "./react": {
-      "import": "./src/react.js"
-    },
-    "./angular": {
-      "import": "./src/angular.ts"
-    },
-    "./svelte": {
-      "import": "./src/svelte.js"
-    }
+    ".": "./index.js"
   },
-  "peerDependencies": {
-    "react": ">=16",
-    "vue": "^2.6 || ^3.0",
-    "@angular/core": ">=12",
-    "svelte": ">=3"
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "eslint": "^9.32.0",
+    "globals": "^16.3.0"
   }
 }
