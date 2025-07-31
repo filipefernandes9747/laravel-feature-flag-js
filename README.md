@@ -15,7 +15,7 @@ A lightweight, framework-agnostic **feature flag manager** with helpers
 ## Installation
 
 ```bash
-npm instal laravel-feature-flag-js
+npm instal laravel-feature-flag
 ```
 
 ---
@@ -23,7 +23,7 @@ npm instal laravel-feature-flag-js
 ## Core Usage
 
 ```js
-const { FeatureFlag } = require("laravel-feature-flag-js");
+const { FeatureFlag } = require("laravel-feature-flag");
 
 const flags = new FeatureFlag({ darkMode: false, betaFeature: true });
 

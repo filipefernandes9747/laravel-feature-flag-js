@@ -1,5 +1,5 @@
 {
-  "name": "@filipefernandes/laravel-feature-flag-js",
+  "name": "laravel-feature-flag",
   "version": "0.0.1",
   "description": "A lightweight, framework-agnostic feature flag manager with helpers",
   "main": "index.js",
